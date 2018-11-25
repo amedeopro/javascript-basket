@@ -49,31 +49,36 @@ function generaCodice(){
 
 var giocatori =
   {
-
+    codiceGiocatore: '',
+    puntiFatti: 0,
+    rimbalzi: 0,
+    falli: 0
   };
 
 var arrayGiocatori = [];
 
   for (var i = 0; i < 100; i++) {
-    giocatori.codiceGiocatore = generaCodice();
-    giocatori.puntiFatti = numeroRandom(1,50);
-    giocatori.rimbalzi = numeroRandom(1,20);
-    giocatori.falli = numeroRandom(1,4);
+
+      giocatori.codiceGiocatore = generaCodice();
+      giocatori.puntiFatti = numeroRandom(1,50);
+      giocatori.rimbalzi = numeroRandom(1,20);
+      giocatori.falli = numeroRandom(1,4);
+
+
 
     arrayGiocatori.push(giocatori);
 
-
   }
-    // if (giocatori.puntiFatti % 3 == 0) {
-    //   var tre = Math.ceil(giocatori.puntiFatti / 3);
-    //   var percentualeDaTre = giocatori.puntiFatti / (tre * 3) * 100;
-    //
-    // }
-    //
-    // giocatori.tiriDaTre = percentualeDaTre
 
-
-
-
-console.log(giocatori);
 console.log(arrayGiocatori);
+
+// var richiestaUtente = prompt('inserisci un codice giocatore');
+// var stampaGiocatore = false;
+//
+// for (var i = 0; i < arrayGiocatori.length; i++) {
+//   if (richiestaUtente.includes(arrayGiocatori[i])) {
+//     document.writeln(arrayGiocatori[i]);
+//   } else {
+//     document.writeln('questo giocatore non è nel database');
+//   }
+// }

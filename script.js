@@ -71,14 +71,3 @@ var arrayGiocatori = [];
   }
 
 console.log(arrayGiocatori);
-
-// var richiestaUtente = prompt('inserisci un codice giocatore');
-// var stampaGiocatore = false;
-//
-// for (var i = 0; i < arrayGiocatori.length; i++) {
-//   if (richiestaUtente.includes(arrayGiocatori[i])) {
-//     document.writeln(arrayGiocatori[i]);
-//   } else {
-//     document.writeln('questo giocatore non è nel database');
-//   }
-// }

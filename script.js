@@ -47,11 +47,12 @@ function generaCodice(){
 
 //creo un array con all'interno un oggetto per creare i giocatori
 
-var giocatori = [
+var giocatori =
   {
 
-  },
-];
+  };
+
+var arrayGiocatori = [];
 
   for (var i = 0; i < 100; i++) {
     giocatori.codiceGiocatore = generaCodice();
@@ -59,16 +60,20 @@ var giocatori = [
     giocatori.rimbalzi = numeroRandom(1,20);
     giocatori.falli = numeroRandom(1,4);
 
-    if (giocatori.puntiFatti % 3 == 0) {
-      var tre = math.floor(giocatori.puntiFatti / 3);
-      console.log(tre)
-      var percentualeDaTre = giocatori.puntiFatti / (tre * 3) * 100;
+    arrayGiocatori.push(giocatori);
 
-    }
-
-    giocatori.tiriDaTre = percentualeDaTre
 
   }
+    // if (giocatori.puntiFatti % 3 == 0) {
+    //   var tre = Math.ceil(giocatori.puntiFatti / 3);
+    //   var percentualeDaTre = giocatori.puntiFatti / (tre * 3) * 100;
+    //
+    // }
+    //
+    // giocatori.tiriDaTre = percentualeDaTre
+
+
 
 
 console.log(giocatori);
+console.log(arrayGiocatori);

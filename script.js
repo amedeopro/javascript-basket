@@ -64,8 +64,6 @@ var arrayGiocatori = [];
       giocatori.rimbalzi = numeroRandom(1,20);
       giocatori.falli = numeroRandom(1,4);
 
-
-
     arrayGiocatori.push(giocatori);
 
   }

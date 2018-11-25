@@ -45,7 +45,7 @@ function generaCodice(){
 
 
 
-//creo un array con all'interno un oggetto per creare i giocatori
+//creo un array con all'interno uno o più oggetti per creare i giocatori
 
 var giocatori =
   {

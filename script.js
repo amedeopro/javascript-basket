@@ -74,7 +74,7 @@ function generaCodice(){
     var giocatore = arrayGiocatori[i];
 
     if (richiestaUtente == giocatore.codiceGiocatore) {
-      
+
       for (var key in giocatore) {
         document.writeln(key + giocatore[key]);
 

@@ -55,6 +55,7 @@ var giocatori =
     falli: 0
   };
 
+  var arrayGiocatori = [];
 
   for (var i = 0; i < 100; i++) {
 
@@ -63,17 +64,8 @@ var giocatori =
       giocatori.rimbalzi = numeroRandom(1,20);
       giocatori.falli = numeroRandom(1,4);
 
-      for (var key in giocatori) {
-        document.writeln(key + ': ' + giocatori[key] + '<br>');
-      }
-
       console.log(giocatori)
+
   }
 
-
-
   var richiestaUtente = prompt('inserisci codice giocatore');
-
-    if (richiestaUtente == giocatori.codiceGiocatore) {
-      document.writeln(giocatori.codiceGiocatore + '<br>');
-    }

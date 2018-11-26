@@ -47,30 +47,32 @@ function generaCodice(){
 
 //creo un array con all'interno uno o più oggetti per creare i giocatori
 
-var giocatore =
-  {
-    codiceGiocatore: '',
-    puntiFatti: 0,
-    rimbalzi: 0,
-    falli: 0,
-    percDaDue: 0,
-    percDaTre: 0,
-  };
+
 
   var arrayGiocatori = [];
 
   for (var i = 0; i < 100; i++) {
 
-      giocatore.codiceGiocatore = generaCodice();
-      giocatore.puntiFatti = numeroRandom(1,50);
-      giocatore.rimbalzi = numeroRandom(1,20);
-      giocatore.falli = numeroRandom(1,4);
-      giocatore.percDaDue = numeroRandom(0,100) + "%";
-      giocatore.percDaTre = numeroRandom(0,100) + "%";
+    var giocatore =
+      {
+        codiceGiocatore: generaCodice(),
+        puntiFatti: numeroRandom(1,50),
+        rimbalzi: numeroRandom(1,20),
+        falli: numeroRandom(1,4),
+        percDaDue: numeroRandom(0,100) + "%",
+        percDaTre: numeroRandom(0,100) + "%",
+      };
 
-      arrayGiocatori.push({giocatore}); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
+      arrayGiocatori.push(giocatore); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
+
+      console.log(generaCodice()); //mi loggo i codici per vedere pi quale inserire altrimenti avrei tutti gli oggetti chiusi e non visualizzabili in console.log
   }
 
   console.log(arrayGiocatori);
 
   var richiestaUtente = prompt('inserisci codice giocatore');
+
+  for (var i = 0; i < giocatore.length; i++) {
+    var giocatoreI = giocatore[i]
+    console.log(giocatoreI.codiceGiocatore);
+  }

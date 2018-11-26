@@ -47,7 +47,7 @@ function generaCodice(){
 
 //creo un array con all'interno uno o più oggetti per creare i giocatori
 
-var giocatori =
+var giocatore =
   {
     codiceGiocatore: '',
     puntiFatti: 0,
@@ -59,13 +59,14 @@ var giocatori =
 
   for (var i = 0; i < 100; i++) {
 
-      giocatori.codiceGiocatore = generaCodice();
-      giocatori.puntiFatti = numeroRandom(1,50);
-      giocatori.rimbalzi = numeroRandom(1,20);
-      giocatori.falli = numeroRandom(1,4);
+      giocatore.codiceGiocatore = generaCodice();
+      giocatore.puntiFatti = numeroRandom(1,50);
+      giocatore.rimbalzi = numeroRandom(1,20);
+      giocatore.falli = numeroRandom(1,4);
 
-      console.log(giocatori)
-
+      arrayGiocatori.push({giocatore}); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
   }
+
+  console.log(arrayGiocatori);
 
   var richiestaUtente = prompt('inserisci codice giocatore');
